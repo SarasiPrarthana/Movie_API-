@@ -26,7 +26,8 @@
     <div>
         <section class="hero-section">
             <img src="/assets/images/money-heist-new.jpg" alt="Money Heist" class="hero-image">
-            <!-- <div class="absolute inset-0 bg-black/40"></div> -->
+            <!-- <div class="absolute inset-0 bg-black/30"></div> -->
+            <div class="overlay"></div>
     </div>
 
     <div class="relative px-12 top-32 max-2-xl">
@@ -53,6 +54,26 @@
         </button>
     </div>
     </section>
+
+    <div id="videoModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+        <div class="bg-gray-900 rounded-lg overflow-hidden w-[800px] max-w-[95%] shadow-lg">
+            <div class="flex justify-beteween items-center px-4 py-2 modal-header">
+                <h2 class="font-bold cinema-title">Now PLaying</h2>
+                <button id="closeBtn" class="text-red-500 font-bold text-xl">  ✖  </button>
+            </div>
+
+            <div id="movieVideo" class="w-full h-[450px]">
+                <iframe class="w-full h-[450px]"
+                    src="https://www.youtube.com/embed/_InqQJRqGW4?si=_q5-vzF33pzmjjQY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="/assets/js/index.js"></script>
 </body>
 

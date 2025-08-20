@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieHunt</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body class="bg-gray-900 text-white fonts-mono">
-
-    <header class="flex justify-between items-center p-4 bg-gray-800 shadow-lg">
-        <h1 class="text-4xl font-bold text-red-900">MovieHunt</h1>
-        <nav class="space-x-40">
-            <a href="#" class="hover:text-red-900">Home</a>
-            <a href="#" class="hover:text-red-900">Movies</a>
-            <a href="#" class="hover:text-red-900">My List</a>
+<body class="bg-black text-white">
+<div>
+    <header class="flex items-center justify-beteween gap-40 px-10 py-5 bg-black">
+        <h1 class="text-4xl font-bold text-red-600 logo-text">MovieHunt</h1>
+        <nav class="navbar">
+            <a href="#" class="hover:text-red-500">Home</a>
+            <a href="#" class="hover:text-red-500">Movies</a>
+            <a href="#" class="hover:text-red-500">My List</a>
         </nav>
     </header>
-
+</div>
+<div>
+    <section class="relative h-[80vh] w-full">
+        <img src="/assets/images/money-heist-new.jpg" alt="Money Heist" class="hero-image">
+        <!-- <div class="absolute inset-0 bg-black/40"></div> -->
+    </section>
+</div>
     <script src="/assets/js/index.js"></script>
 </body>
+
 </html>

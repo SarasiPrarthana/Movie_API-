@@ -1,42 +1,38 @@
-*{
-    font-family: 'Aclonica' , sans-serif;
+* {
+    font-family: 'Aclonica', sans-serif;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: left;
-    gap: 250px;
+    gap: 180px;
     margin-left: 200px;
 }
 
-.navbar a{
+.navbar a {
     font-size: 20px;
     /* text-decoration: underline;
     text-decoration-thickness: 1px;
     color: darkred; */
 }
 
-/* .hero-section{
+.hero-section {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 800px;
     overflow: hidden;
-} */
+}
 
-.hero-image{
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-image {
+    position: relative;
     width: 100%;
     height: 800px;
     object-fit: cover;
-    z-index: -10;
+    z-index: 0;
 }
 
-.overlay{
+.overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 800px;
     object-fit: cover;
@@ -44,22 +40,44 @@
     z-index: -10;
 }
 
-.hero-text{
+.hero-text {
     margin-top: 1.5rem;
     color: #f3f4f6;
     line-height: 1.5;
     font-size: 12px;
 }
 
-.cinema-title{
+.cinema-title {
     letter-spacing: 4px;
 }
 
-.logo-text{
+.logo-text {
     letter-spacing: 2px;
 }
 
-.modal-header{
-    background: linear-gradient(80deg, #b91c1c, black );
+.modal-header {
+    background: linear-gradient(80deg, #b91c1c, black);
     padding: 0.5rem 1rem;
+}
+
+.movie-carousel {
+    background-color: #2C2424;
+}
+
+.movie-card img {
+    width: 200px;
+    height: 300px;
+}
+
+.popular {
+    background-color: #1A1414;
+}
+
+.movie-popular {
+    background-color: #1A1414;
+}
+
+.movie-card1 img {
+    width: 200px;
+    height: 300px;
 }

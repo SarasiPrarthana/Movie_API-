@@ -152,3 +152,74 @@
     color: white;
     cursor: pointer;
 }
+
+.movies-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    padding: 50px;
+}
+
+.movie-card-m{
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.movie-card-m:hover{
+    transform: scale(1.05);
+}
+
+.movie-card-m img{
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.movie-info{
+    padding: 15px;
+    color: #fff;
+}
+
+.movie-info h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-info p{
+    color: white;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.movie-info button{
+    padding: 5px 12px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.movie-info button:hover{
+    background: #ddd;
+}
+
+@media(max-width: 900px){
+    .movies-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .movies-grid{
+        grid-template-columns: 1fr;
+    }
+}

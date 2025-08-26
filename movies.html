@@ -25,7 +25,7 @@
                 </nav>
             </header>
         </div>
-    
+
         <section id="home" class="home-section">
             <div class="home-content">
                 <h2>MovieHunt</h2>
@@ -39,57 +39,204 @@
 
         <section id="movies" class="hidden-section movies-section">
             <div class="movies-grid">
+
                 <div class="movie-card-m">
                     <img src="/assets/images/shrek1.jpeg" alt="shrek1">
                     <div class="movie-info">
                         <h3>SHREK</h3>
-                        <p>2004</p>
-                        <button>Details</button>
+                        <p>2001</p>
+                        <button onclick="openModal('shrek1')">Details</button>
                     </div>
                 </div>
                 <div class="movie-card-m">
                     <img src="/assets/images/shrek2.jpeg" alt="shrek2">
                     <div class="movie-info">
-                        <h3>SHREK</h3>
+                        <h3>SHREK 2</h3>
                         <p>2004</p>
-                        <button>Details</button>
+                        <button onclick="openModal('shrek2')">Details</button>
                     </div>
                 </div>
                 <div class="movie-card-m">
                     <img src="/assets/images/shrek3.jpg" alt="shrek3">
                     <div class="movie-info">
-                        <h3>SHREK</h3>
-                        <p>2004</p>
-                        <button>Details</button>
+                        <h3>SHREK the Third</h3>
+                        <p>2007</p>
+                        <button onclick="openModal('shrek3')">Details</button>
                     </div>
                 </div>
                 <div class="movie-card-m">
                     <img src="/assets/images/shrek4.jpg" alt="shrek4">
                     <div class="movie-info">
-                        <h3>SHREK</h3>
-                        <p>2004</p>
-                        <button>Details</button>
+                        <h3>SHREK the Halls</h3>
+                        <p>2007</p>
+                        <button onclick="openModal('shrek4')">Details</button>
                     </div>
                 </div>
                 <div class="movie-card-m">
                     <img src="/assets/images/shrek5.jpeg" alt="shrek5">
                     <div class="movie-info">
-                        <h3>SHREK</h3>
-                        <p>2004</p>
-                        <button>Details</button>
+                        <h3>SHREK Forever After</h3>
+                        <p>2010</p>
+                        <button onclick="openModal('shrek5')">Details</button>
                     </div>
                 </div>
                 <div class="movie-card-m">
                     <img src="/assets/images/shrek6.jpg" alt="shrek6">
                     <div class="movie-info">
-                        <h3>SHREK</h3>
-                        <p>2004</p>
-                        <button>Details</button>
+                        <h3>SHREK Shrakeless</h3>
+                        <p>2010</p>
+                        <button onclick="openModal('shrek6')">Details</button>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div id="shrek1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('shrek1')">&times;</span>
+                <h2 class="modal-title">Movie Details</h2>
+                <div class="modal-body">
+                    <img src="/assets/images/shrek1.jpeg" alt="shrek1">
+                    <div class="movie-details">
+                        <h1>SHREK</h1>
+                        <p><strong>Year :</strong> 2001</p>
+                        <p><strong>Genre :</strong> Adventure, Family, Animation, Comedy, Fantasy</p>
+                        <p><strong>Director :</strong> Andrew Adamson, Vicky Jenson</p>
+                        <p><strong>Actors :</strong>Suzan Fitzer, Kathleen Freeman, Chris Miller, Eddie Murphy, Jean
+                            Gilpin</p>
+                        <p><strong>Plot :</strong>Once upon a time, in a far away swamp, there lived an ogre named
+                            Shrek whose precious solitude is suddenly shattered by an invasion of annoying fairy tale
+                            characters. They were all banished from their kingdom by the evil Lord Farquaad. Determined
+                            to save their home, not to mention his, Shrek cuts a deal with Farquaad and sets out to
+                            rescue Princess Fiona to be Farquaad's bride. Rescuing the Princess may be small compared to
+                            her deep, dark secret.</p>
+                        <p><strong>IMDb Rating :</strong> 7.9</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shrek2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('shrek2')">&times;</span>
+                <h2 class="modal-title">Movie Details</h2>
+                <div class="modal-body">
+                    <img src="/assets/images/shrek2.jpeg" alt="shrek2">
+                    <div class="movie-details">
+                        <h1>SHREK 2</h1>
+                        <p><strong>Year :</strong> 2004</p>
+                        <p><strong>Genre :</strong> Adventure, Family, Animation, Comedy, Fantasy</p>
+                        <p><strong>Director :</strong> Andrew Adamson, Kelly Asbury, Conrad Vernon</p>
+                        <p><strong>Actors :</strong>Suzan Fitzer, Kathleen Freeman, Chris Miller, Eddie Murphy, Jean
+                            Gilpin</p>
+                        <p><strong>Plot :</strong>After returning from their honeymoon and showing home movies to their
+                            friends, Shrek and Fiona learn that her parents have heard that she has married her true
+                            love and wish to invite him to their kingdom, called Far Far Away. The catch is: Fiona's
+                            parents are unaware of the curse that struck their daughter and have assumed she married
+                            Prince Charming, not a 700-pound ogre with horrible hygiene and a talking donkey pal.</p>
+                        <p><strong>IMDb Rating :</strong> 7.4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shrek3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('shrek3')">&times;</span>
+                <h2 class="modal-title">Movie Details</h2>
+                <div class="modal-body">
+                    <img src="/assets/images/shrek3.jpg" alt="shrek3">
+                    <div class="movie-details">
+                        <h1>SHREK the Third</h1>
+                        <p><strong>Year :</strong> 2007</p>
+                        <p><strong>Genre :</strong> Adventure, Family, Animation, Comedy, Fantasy</p>
+                        <p><strong>Director :</strong> Andrew Adamson, Vicky Jenson</p>
+                        <p><strong>Actors :</strong>Suzan Fitzer, Kathleen Freeman, Chris Miller, Eddie Murphy, Jean
+                            Gilpin</p>
+                        <p><strong>Plot :</strong>Shrek is just starting to settle down in his beloved swamp with his
+                            wife Fiona, but their mucky bliss doesn't last for long as word arrives that the ogre's
+                            froggy father-in-law is about to croak. The very last thing Shrek wants is to become King,
+                            but with no other heir in sight, it looks like the grumpy green one is destined never to
+                            live quietly in the swamp again. A glimmer of hope appears in the form of heir Artie. A
+                            DreamWorks animation.</p>
+                        <p><strong>IMDb Rating :</strong> 6.1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shrek4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('shrek4')">&times;</span>
+                <h2 class="modal-title">Movie Details</h2>
+                <div class="modal-body">
+                    <img src="/assets/images/shrek4.jpg" alt="shrek4">
+                    <div class="movie-details">
+                        <h1>SHREK the Halls</h1>
+                        <p><strong>Year :</strong> 2007</p>
+                        <p><strong>Genre :</strong> Adventure, Family, Animation, Comedy, Fantasy</p>
+                        <p><strong>Director :</strong> Andrew Adamson, Vicky Jenson</p>
+                        <p><strong>Actors :</strong>Suzan Fitzer, Kathleen Freeman, Chris Miller, Eddie Murphy, Jean
+                            Gilpin</p>
+                        <p><strong>Plot :</strong>The Christmas tree isn't the only thing green in this new holiday
+                            classic. Shrek is back and trying to get into the spirit of the season. After promising
+                            Fiona and the kids a Christmas they'll remember, he is forced to take a crash course in the
+                            holiday. But just when he thinks he has everything for their quiet family Christmas just
+                            right, there is a knock at the door.</p>
+                        <p><strong>IMDb Rating :</strong> 6.4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shrek5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('shrek5')">&times;</span>
+                <h2 class="modal-title">Movie Details</h2>
+                <div class="modal-body">
+                    <img src="/assets/images/shrek5.jpeg" alt="shrek5">
+                    <div class="movie-details">
+                        <h1>SHREK Forever After</h1>
+                        <p><strong>Year :</strong> 2010</p>
+                        <p><strong>Genre :</strong> Adventure, Family, Animation, Comedy, Fantasy</p>
+                        <p><strong>Director :</strong> Andrew Adamson, Vicky Jenson</p>
+                        <p><strong>Actors :</strong>Suzan Fitzer, Kathleen Freeman, Chris Miller, Eddie Murphy, Jean
+                            Gilpin</p>
+                        <p><strong>Plot :</strong>Long-settled into married life and fully domesticated, Shrek (Mike
+                            Mitchell) begins to long for the days when he felt like a real ogre. Duped into signing a
+                            contract with devious Rumpelstiltskin, he finds himself in an alternate version of Far Far
+                            Away, where ogres are hunted, Rumpelstiltskin rules, and he and Fiona (Darren Lemke) have
+                            never met. Shrek must find a way out of the contract to restore his world and reclaim his
+                            true love.</p>
+                        <p><strong>IMDb Rating :</strong> 6.3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="shrek6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('shrek6')">&times;</span>
+                <h2 class="modal-title">Movie Details</h2>
+                <div class="modal-body">
+                    <img src="/assets/images/shrek6.jpg" alt="shrek6">
+                    <div class="movie-details">
+                        <h1>SHREK Shrakeless</h1>
+                        <p><strong>Year :</strong> 2010</p>
+                        <p><strong>Genre :</strong> Adventure, Family, Animation, Comedy, Fantasy</p>
+                        <p><strong>Director :</strong> Andrew Adamson, Vicky Jenson</p>
+                        <p><strong>Actors :</strong>Suzan Fitzer, Kathleen Freeman, Chris Miller, Eddie Murphy, Jean
+                            Gilpin</p>
+                        <p><strong>Plot :</strong>Shrek gets in the Halloween spirit by challenging his fairytale
+                            friends to come up with scary stories for a contest. But the gang learn that they'll have to
+                            spend the night in Lord Farquaad's haunted castle before the winner is named.</p>
+                        <p><strong>IMDb Rating :</strong> 6.7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="/assets/js/index.js"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 const watchBtn = document.getElementById("watchBtn");
 const videoModal = document.getElementById("videoModal");
 const closeBtn = document.getElementById("closeBtn");
-const movieVideo = document.getElementById("movieVideo iframe");
+const movieVideo = document.getElementById("movieIframe");
 
 watchBtn.addEventListener("click", () =>{
     videoModal.classList.remove("hidden");
@@ -27,7 +27,7 @@ window.addEventListener("click", (e) => {
 const watchBtn1 = document.getElementById("watchBtn1");
 const videoModal1 = document.getElementById("videoModal1");
 const closeBtn1 = document.getElementById("closeBtn1");
-const movieVideo1 = document.getElementById("movieVideo iframe1");
+const movieVideo1 = document.getElementById("movieIframe1");
 
 watchBtn1.addEventListener("click", () =>{
     videoModal1.classList.remove("hidden");
@@ -49,3 +49,20 @@ window.addEventListener("click", (e) => {
         movieIframe1.src = movieIframe1.src;
     }
 });
+
+function openModal(id){
+    document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id){
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event){
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(modal => {
+        if(event.target === modal){
+            modal.style.display = "none";
+        }
+    });
+}

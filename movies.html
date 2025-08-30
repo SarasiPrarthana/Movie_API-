@@ -30,12 +30,30 @@
             <div class="home-content">
                 <h2>MovieHunt</h2>
                 <p>Search your favourite movies and get complete details at a glance.</p>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search more...">
+                <!-- <div class="search-bar">
+                    <input type="text" placeholder="Search more..." id="searchbar">
                     <button>Search</button>
+                </div> -->
+                <form id="searchForm" class="d-flex">
+                    <input type="text " id="searchbar" class="form-floating me-2" placeholder="Enter Movie title">
+                    <button type="submit" class="btn btn-primary">
+                        <search></search>
+                    </button>
+                </form>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-12">
+                    <button id="randombutton" class="btn btn-warning">Discover a Random movie</button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12">
+                    <div id="movieResults" class="row g-4"> </div>
                 </div>
             </div>
         </section>
+
 
         <section id="movies" class="hidden-section movies-section">
             <div class="movies-grid">

@@ -1,11 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie_API</title>
+    <title>MovieHunt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
-    
+
+<body class="bg-black text-white">
+    <section>
+        <div>
+            <header class="flex items-center justify-beteween gap-40 px-10 py-5 bg-black">
+                <h1 class="text-4xl font-bold text-red-600 logo-text">MovieHunt</h1>
+                <nav class="navbar">
+                    <a href="#home" class="hover:text-red-500">Home</a>
+                    <a href="/movies.html" class="hover:text-red-500">Movies</a>
+                    <a href="#mylist" class="hover:text-red-500">My List</a>
+                </nav>
+            </header>
+        </div>
+        <div>
+            <section class="hero-section" id="home">
+                <img src="/assets/images/money-heist-new.jpg" alt="Money Heist" class="hero-image">
+                <div class="overlay"></div>
+
+
+                <div class="absolute top-1/3 left-12 max-w-2xl text-white">
+                    <h2 class="text-7xl font-extrabold cinema-title">
+                        <span class="text-white">Money</span> <span class="text-black bg-red-600 px-2">Heist</span>
+                    </h2>
+
+                    <div class="flex gap-5 mt-5 text-gray-200">
+                        <span>⭐ 8.2</span>
+                        <span>• 2017</span>
+                        <span>• 5 Seasons</span>
+                    </div>
+
+                    <p class="hero-text">
+                        To carry out biggest heist in history, a mysterious man called The Professor recruits a <br>band
+                        of
+                        eight
+                        robbers who have a single characteristic: none of them has anything to lose. <br>Five months of
+                        seclusin -
+                        memorizing every step, every detail, every probability - <br>culminate in eleven days locked up
+                        in
+                        the
+                        National Coinage and Stamp Factory of Spain, <br>surrounded by police forces and with dozens of
+                        hostages in
+                        their power, to find out <br>whether their suicide wager will lead to everything or nothing
+                    </p>
+
+                    <button id="watchBtn" class="mt-6 bg-red-600 px-6 py-2 rounded-full hover:bg-red-700 transition">
+                        ▶ Watch
+                    </button>
+                </div>
+            </section>
+
+            <div id="videoModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                <div class="bg-gray-900 rounded-lg overflow-hidden w-[800px] max-w-[95%] shadow-lg">
+                    <div class="flex justify-between items-center px-4 py-2 modal-header">
+                        <h2 class="font-bold cinema-title">Now PLaying</h2>
+                        <button id="closeBtn" class="text-black-500 font-bold text-xl"> ✖ </button>
+                    </div>
+
+                    <div id="movieVideo" class="w-full h-[450px]">
+                        <iframe id="movieIframe" class="w-full h-[450px]"
+                            src="https://www.youtube.com/embed/_InqQJRqGW4?si=_q5-vzF33pzmjjQY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <section class="movie-carousel py-6">
+                <h3
+                    class="text-2xl font-extrabold px-10 cinema-title text-white text-center underline decoration-4 decoration-red-600 underline-offset-8">
+                    Trending Now</h3>
+                <div class="flex flex-wrap gap-[50px] mt-5 px-10">
+                    <span class="px-12 py-1 bg-red-600 rounded-full cursor-pointer font-extrabold">Action</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Adventure</span>
+                    <span class="px-12 py-1 bg-red-600 rounded-full cursor-pointer">Anime</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Drama</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Mystrey</span>
+                    <span class="px-12 py-1 bg-red-600 rounded-full cursor-pointer">Romantic</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Crime</span>
+                </div>
+            </section>
+
+            <section class="movie-carousel px-6 py-4">
+                <div class="carousel flex overflow--auto space-x-14 scrollbar">
+                    <div class="movie-card">
+                        <img src="/assets/images/Tvd.webp" alt="TVD">
+                        <p>The Vampire Diares <br> Season 02</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/427807-black-widow-0-1000-0-1500-crop.jpg" alt="Black-Widow">
+                        <p>Black Widow</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/Tangled_poster.jpg" alt="TVD">
+                        <p>Tangled</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/Beetlejuice_Beetlejuice_poster.jpg.webp" alt="TVD">
+                        <p>Beetlejuice <br>Beetlejuice</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/p_bolt_19881_2a6c5fc2.jpeg" alt="TVD">
+                        <p>BOLT</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/Aladdin.jpeg" alt="TVD">
+                        <p>Aladdin</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popular py-6">
+                <!-- <img src="/assets/images/red_arrow-removebg-preview.png" alt="arrow-going-up" width="50px"
+                    height="50px"> -->
+                <h3
+                    class="text-2xl font-extrabold px-10 cinema-title text-white text-center underline decoration-4 decoration-red-600 underline-offset-8">
+                    Popular</h3>
+                <div class="flex flex-wrap gap-[50px] mt-5 px-10">
+                    <span class="px-12 py-1 bg-red-600 rounded-full cursor-pointer font-extrabold">Action</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Adventure</span>
+                    <span class="px-12 py-1 bg-red-600 rounded-full cursor-pointer">Anime</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Drama</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Mystrey</span>
+                    <span class="px-12 py-1 bg-red-600 rounded-full cursor-pointer">Romantic</span>
+                    <span class="px-12 py-1 bg-gray-400 rounded-full cursor-pointer">Crime</span>
+                </div>
+            </section>
+
+            <section class="movie-popular px-6 py-4">
+                <div class="carousel flex overflow--auto space-x-14 scrollbar">
+                    <div class="movie-card">
+                        <img src="/assets/images/barbie.jpeg" alt="Barbie">
+                        <p>Barbie & the <br> Dimamond Castle</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/aashiqui.jpg" alt="Ashiqui">
+                        <p>Ashiqui 2</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/The_Call_of_the_Wild_poster.jpg" alt="Wild">
+                        <p>The Call <br>of the <br>WILD</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/Oppenheimer_(film).jpg" alt="Oppenheimer">
+                        <p>OPPENHEIMER</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/beauty and the beast.jpeg" alt="Beast">
+                        <p>BEAUTY <br> AND THE <br>BEAST</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/eleven.jpeg" alt="Eleven">
+                        <p>ELEVEN</p>
+                    </div>
+                </div>
+            </section>
+            <section class="movie-popular px-6 py-4">
+                <div class="carousel flex overflow--auto space-x-14 scrollbar">
+                    <div class="movie-card">
+                        <img src="/assets/images/endgame.jpeg" alt="EndGame">
+                        <p>AVENGERS <br>ENDGAME</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/s-line_pos_01_en.webp" alt="SLine">
+                        <p>SLINE</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/jawan.jpeg" alt="Jawan">
+                        <p>JAWAN</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/jurrasic.jpg" alt="Jurrasic">
+                        <p>JURRASIC WORLD <br>REBIRTH</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/oxford new.jpg" alt="Oxford">
+                        <p>MY <br>OXFORD <br>YEAR</p>
+                    </div>
+                    <div class="movie-card">
+                        <img src="/assets/images/spider.jpeg" alt="DeadPool">
+                        <p>DEADPOOL & WOLVERINE</p>
+                    </div>
+                </div>
+            </section>
+
+            <div>
+                <section class="hero-section">
+                    <img src="/assets/images/zootopia.jpg" alt="Zootopia" class="hero-image">
+                    <!-- <div class="absolute inset-0 bg-black/30"></div> -->
+                    <div class="overlay"></div>
+
+                    <div class="absolute top-1/3 left-12 max-w-2xl text-white">
+                        <h2 class="text-5xl font-extrabold cinema-title">
+                            <span class="text-white">Z O O T O P I A
+                        </h2> <br>
+
+                        <div class="absolute top-1/3 left-12 max-w-2xl text-white">
+
+                            <div class="flex gap-5 mt-5 text-gray-200">
+                                <span>⭐ 7.5</span>
+                                <span>• 2025 November 25</span>
+                            </div>
+
+                            <p class="hero-text">
+                                Detectives Judy Hopps and Nick Wilde find themselves on the <br>twisting trail of a
+                                mysterious
+                                reptile who turns the mammal <br>metropolis of Zootopia upside down. Testing their
+                                growing
+                                <br>
+                                partnership like never before, they go under cover in new parts <br>of town to crack the
+                                case.
+                            </p>
+
+                            <button id="watchBtn1"
+                                class="mt-6 bg-black px-6 py-2 rounded-full hover:bg-black-800 transition">
+                                ▶ Watch
+                            </button>
+                        </div>
+                </section>
+
+                <div id="videoModal1" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+                    <div class="bg-gray-900 rounded-lg overflow-hidden w-[800px] max-w-[95%] shadow-lg">
+                        <div class="flex justify-between items-center px-4 py-2 modal-header">
+                            <h2 class="font-bold cinema-title">Now PLaying</h2>
+                            <button id="closeBtn1" class="text-black-500 font-bold text-xl"> ✖ </button>
+                        </div>
+
+                        <div id="movieVideo1" class="w-full h-[450px]">
+                            <iframe id="movieIframe1" class="w-full h-full"
+                                src="https://www.youtube.com/embed/BjkIOU5PhyQ?si=cbIsANbKbCD0oa34"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section class="movie-popular px-6 py-4">
+                    <div class="carousel flex overflow--auto space-x-14 scrollbar">
+                        <div class="movie-card">
+                            <img src="/assets/images/dora.jpeg" alt="EndGame">
+                            <p>DORA</p>
+                        </div>
+                        <div class="movie-card">
+                            <img src="/assets/images/ratsazan.jpeg" alt="SLine">
+                            <p>RATSAZAN</p>
+                        </div>
+                        <div class="movie-card">
+                            <img src="/assets/images/barbieeee.jpg" alt="Jawan">
+                            <p>Barbie & the Nutcracker</p>
+                        </div>
+                        <div class="movie-card">
+                            <img src="/assets/images/joker.jpeg" alt="Jurrasic">
+                            <p>JOKER</p>
+                        </div>
+                        <div class="movie-card">
+                            <img src="/assets/images/brave.jpg" alt="Oxford">
+                            <p>BRAVE</p>
+                        </div>
+                        <div class="movie-card">
+                            <img src="/assets/images/nun.jpeg" alt="DeadPool">
+                            <p>THE NUN</p>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="bg-black text-gray-400 py-10">
+                    <div
+                        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                        <div>
+                            <h2 class="text-xl font-bold mb-3">MovieHunt</h2>
+                            <p class="text-sm">Discover movies, watch trailers, and check ratings and reviews—all in one
+                                place.</p>
+                        </div>
+
+                        <div class="md:text-right">
+                            <h3 class="text-lg font-semibold mb-2">Follow Me</h3>
+                            <div class="flex justify-start md:justify-end space-x-4">
+                                <a href="https://www.instagram.com/yourusername" target="_blank"
+                                    class="text-gray-400 hover:text-white text-2xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                                    class="text-gray-400 hover:text-white text-2xl">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://github.com/yourusername" target="_blank"
+                                    class="text-gray-400 hover:text-white text-2xl">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-6 text-sm text-gray-500">
+                        ©2025 MovieHunt. All rights reserved.
+                    </div>
+                </footer>
+
+
+                <script src="/assets/js/index.js"></script>
 </body>
+
 </html>
